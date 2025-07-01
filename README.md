@@ -51,7 +51,7 @@ This repo includes public datasets related to:
 Want to integrate with your frontend? Just fetch the raw JSON:
 
 URL:
-[https://raw.githubusercontent.com/rokibulroni/data-gov-cyber-datasets-index/main/data/data\_gov\_datasets.json](https://raw.githubusercontent.com/rokibulroni/data-gov-cyber-datasets-index/main/data/data_gov_datasets.json)
+[Check the API](https://rokibulroni.github.io/data-gov-cyber-datasets-index/data/data_gov_datasets.json)
 
 Frontend usage idea:
 • Load datasets in tables, charts, or search components
