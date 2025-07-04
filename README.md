@@ -1,89 +1,88 @@
- 
-
 # Data.gov Cybersecurity Datasets Index
 
-🔄 **Auto-updated repository of cybersecurity-related datasets from Data.gov** using CKAN API. The output is a structured JSON file refreshed every 3 days — perfect for powering web apps, research tools, or dashboards.
+**🔄 Auto-updated repository of cybersecurity-related datasets from Data.gov using the CKAN API.**
+Structured JSON output, refreshed every 3 days—ideal for powering web apps, research, or dashboards.
 
-👤 Maintained by: Rokibul Islam Roni
-🌐 Website: [https://rokibulroni.com](https://rokibulroni.com)
-📅 Schedule: Auto-updates every 3 days via GitHub Actions
+* **Maintainer:** Rokibul Islam Roni
+* **Website:** [https://rokibulroni.com](https://rokibulroni.com)
+* **Update Schedule:** Every 3 days via GitHub Actions
 
-───────────────────────────────────────
+---
 
-🧠 What’s Inside?
+## 🧠 What’s Inside?
 
-This repo includes public datasets related to:
+This repository aggregates public datasets focused on:
 
-• 🛡️ Cybersecurity
-• 🎣 Phishing, 🐞 Malware, 🛑 Ransomware
-• 🔬 Digital Forensics, 🔁 Reverse Engineering
-• 🧠 IDS, IPS, SIEM, Zero-Day
-• 💣 Exploits, 🧱 Firewalls, 🧵 Threat Intel
-• 🔐 Passwords, Encryption, Network Logs
-• 🕵️ SOC, Breach Reports, CTI, Anomalies
-• 🐍 YARA, 🧪 Suricata, 🧰 Wireshark
-• 🧯 DFIR, 🚨 Incident Logs, 🔍 MITRE Tags
+* 🛡️ Cybersecurity
+* 🎣 Phishing, 🐞 Malware, 🛑 Ransomware
+* 🔬 Digital Forensics, 🔁 Reverse Engineering
+* 🧠 IDS, IPS, SIEM, Zero-Day Threats
+* 💣 Exploits, 🧱 Firewalls, 🧵 Threat Intelligence
+* 🔐 Passwords, Encryption, Network Logs
+* 🕵️ SOC, Breach Reports, CTI, Anomalies
+* 🐍 YARA, 🧪 Suricata, 🧰 Wireshark
+* 🧯 DFIR, 🚨 Incident Logs, 🔍 MITRE Tags
 
-───────────────────────────────────────
+---
 
-⚙️ How It Works
+## ⚙️ How It Works
 
-• Runs a Python script for each keyword (36+ total)
-• Uses CKAN API from Data.gov for dataset listings
-• Merges, filters, and deduplicates the results
-• Saves to: `data/data_gov_datasets.json`
-• Auto-commits updated file only if new results exist
+* Runs a Python script for each keyword (36+ total)
+* Queries Data.gov via CKAN API for dataset listings
+* Merges, filters, and deduplicates results
+* Outputs to: `data/data_gov_datasets.json`
+* Auto-commits updates only if new datasets are found
 
-───────────────────────────────────────
+---
 
-📁 Folder Structure
+## 📁 Folder Structure
 
-| Folder / File                          | Description                        |
-| -------------------------------------- | ---------------------------------- |
-| .github/workflows/update\_datasets.yml | GitHub Actions (runs every 3 days) |
-| scripts/update\_data\_gov.py           | Python crawler script              |
-| data/data\_gov\_datasets.json          | Cleaned JSON index of datasets     |
+| Path                                    | Description                              |
+| --------------------------------------- | ---------------------------------------- |
+| `.github/workflows/update_datasets.yml` | GitHub Actions workflow (3-day interval) |
+| `scripts/update_data_gov.py`            | Main Python crawler script               |
+| `data/data_gov_datasets.json`           | Cleaned JSON index of datasets           |
 
-───────────────────────────────────────
+---
 
-📦 Example Usage (Frontend)
+## 📦 Example Usage (Frontend)
 
-Want to integrate with your frontend? Just fetch the raw JSON:
+Integrate this data in your frontend by fetching the raw JSON:
 
-URL:
-[Check the API](https://rokibulroni.github.io/data-gov-cyber-datasets-index/data/data_gov_datasets.json)
+* **JSON URL:**
+  [https://rokibulroni.github.io/data-gov-cyber-datasets-index/data/data\_gov\_datasets.json](https://rokibulroni.github.io/data-gov-cyber-datasets-index/data/data_gov_datasets.json)
 
-Frontend usage idea:
-• Load datasets in tables, charts, or search components
-• Filter by keyword, format, agency, or date
-• Show links to download datasets directly
+**Ideas:**
 
-───────────────────────────────────────
+* Display datasets in searchable/filterable tables or charts
+* Filter by keyword, format, agency, or publication date
+* Link directly to dataset sources
 
-🧾 JSON Sample (Simplified)
+---
 
+## 🧾 JSON Sample (Simplified)
+
+```json
 {
-"total": 1793,
-"fetched\_at": "2025-07-01 23:30:05",
-"datasets": \[
-{
-"title": "Cyber Threat Indicators",
-"organization": "DHS CISA",
-"notes": "Indicators of Compromise (IOC) shared with federal systems",
-"url": "[https://catalog.data.gov/dataset/example-threat](https://catalog.data.gov/dataset/example-threat)",
-"\_keyword": "threat"
-},
-...
-]
+  "total": 1793,
+  "fetched_at": "2025-07-01 23:30:05",
+  "datasets": [
+    {
+      "title": "Cyber Threat Indicators",
+      "organization": "DHS CISA",
+      "notes": "Indicators of Compromise (IOC) shared with federal systems",
+      "url": "https://catalog.data.gov/dataset/example-threat",
+      "_keyword": "threat"
+    }
+    // ... more items
+  ]
 }
+```
 
- 
+---
 
-───────────────────────────────────────
+## 📜 License
 
-📜 License
-
-• This repo collects only public dataset metadata
-• All data belongs to original dataset providers
-• Code is MIT Licensed — free to use and modify
- 
+* This repository collects and indexes only public dataset metadata.
+* All dataset content belongs to their original providers.
+* Code is [MIT Licensed](LICENSE)—free to use and modify.
